@@ -8,7 +8,7 @@
 
 * IDE: VSCode + extensions
 * Backend: Spring Boot + Gradle
-* Frontend: VueJS + PrimeVue UI + NodeJS
+* Frontend: VueJS + PrimeVue UI
 
 # The project includes:
 | Component      | Added | Status |
