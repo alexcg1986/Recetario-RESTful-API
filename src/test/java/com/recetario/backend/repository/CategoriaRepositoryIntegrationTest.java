@@ -1,9 +1,8 @@
-package com.restaurant.backend.repository;
+package com.recetario.backend.repository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.recetario.backend.model.Categoria;
-import com.recetario.backend.repository.CategoriaRepository;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

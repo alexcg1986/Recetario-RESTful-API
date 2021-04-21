@@ -16,7 +16,7 @@ import com.querydsl.core.types.dsl.PathInits;
 @Generated("com.querydsl.codegen.EntitySerializer")
 public class QProcedencia extends EntityPathBase<Procedencia> {
 
-    private static final long serialVersionUID = 1701374650L;
+    private static final long serialVersionUID = 1927710425L;
 
     public static final QProcedencia procedencia = new QProcedencia("procedencia");
 

@@ -6,7 +6,7 @@ plugins {
 	id 'java-library' // QueryDSL must have
 } 
 
-group = 'com.restaurant'
+group = 'com.recetario'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
@@ -33,7 +33,8 @@ dependencies {
 	
 	annotationProcessor 'org.projectlombok:lombok'
 	annotationProcessor 'com.querydsl:querydsl-apt:4.4.0:jpa' // QueryDSL must have (exactly this way, including :jpa)
-	annotationProcessor 'javax.annotation:javax.annotation-api' // QueryDSL must have
+	annotationProcessor 'jakarta.persistence:jakarta.persistence-api' // QueryDSL must have
+    annotationProcessor 'jakarta.annotation:jakarta.annotation-api' // QueryDSL must have
 
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 

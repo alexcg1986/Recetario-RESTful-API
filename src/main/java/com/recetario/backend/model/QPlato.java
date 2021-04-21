@@ -16,7 +16,7 @@ import com.querydsl.core.types.dsl.PathInits;
 @Generated("com.querydsl.codegen.EntitySerializer")
 public class QPlato extends EntityPathBase<Plato> {
 
-    private static final long serialVersionUID = -517674627L;
+    private static final long serialVersionUID = 1402325212L;
 
     private static final PathInits INITS = PathInits.DIRECT2;
 
