@@ -35,4 +35,3 @@
 | Animate CSS    |   &#10004;   | Working |
 | Unit Testing   |   &#10004;   | Working |
 | QueryDSL       |   &#10004;   | Working |
-| OAuth2+Okta    |   &#10008;   | Pending due to OktaVue SDK incompatibility with Vue 3  |
