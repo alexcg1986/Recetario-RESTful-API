@@ -6,9 +6,9 @@
   
 # Spring Boot & VueJS project to learn about these frameworks
 
-* IDE: VSCode + extensions
-* Backend: Spring Boot + Gradle
-* Frontend: VueJS + PrimeVue UI + NodeJS
+* IDE: VS Code
+* Backend: Spring Boot with Gradle
+* Frontend: VueJS + PrimeVue UI
 
 # The project includes:
 | Component      | Added | Status |
