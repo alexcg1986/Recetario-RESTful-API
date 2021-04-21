@@ -6,7 +6,7 @@
   
 # Spring Boot & VueJS project to learn about these frameworks
 
-* IDE: VSCode + extensions
+* IDE: VS Code
 * Backend: Spring Boot + Gradle
 * Frontend: VueJS + PrimeVue UI
 
