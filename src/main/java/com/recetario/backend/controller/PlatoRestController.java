@@ -3,7 +3,7 @@ package com.recetario.backend.controller;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.recetario.backend.dto.ParametrosDTO;
+// import com.recetario.backend.dto.ParametrosDTO;
 import com.recetario.backend.dto.PlatoDTO;
 import com.recetario.backend.service.PlatoService;
 
@@ -55,17 +55,17 @@ public class PlatoRestController {
         }
     }
 
-    @PostMapping("/filtrado")
-    public ResponseEntity<List<EntityModel<PlatoDTO>>> getAllFiltered(@RequestBody ParametrosDTO parametrosDTO) {
-        try {
-            return new ResponseEntity<List<EntityModel<PlatoDTO>>>(service.getAllFiltered(parametrosDTO).stream()
-                    .map(item -> item
-                            .add(WebMvcLinkBuilder.linkTo(PlatoRestController.class).slash(item.getId()).withSelfRel()))
-                    .collect(Collectors.toList()), HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<List<EntityModel<PlatoDTO>>>(HttpStatus.BAD_REQUEST);
-        }
-    }
+    // @PostMapping("/filtrado")
+    // public ResponseEntity<List<EntityModel<PlatoDTO>>> getAllFiltered(@RequestBody ParametrosDTO parametrosDTO) {
+    //     try {
+    //         return new ResponseEntity<List<EntityModel<PlatoDTO>>>(service.getAllFiltered(parametrosDTO).stream()
+    //                 .map(item -> item
+    //                         .add(WebMvcLinkBuilder.linkTo(PlatoRestController.class).slash(item.getId()).withSelfRel()))
+    //                 .collect(Collectors.toList()), HttpStatus.OK);
+    //     } catch (Exception e) {
+    //         return new ResponseEntity<List<EntityModel<PlatoDTO>>>(HttpStatus.BAD_REQUEST);
+    //     }
+    // }
 
     @PostMapping
     public ResponseEntity<PlatoDTO> save(@RequestBody PlatoDTO dto) {
