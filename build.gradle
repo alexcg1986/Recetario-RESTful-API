@@ -7,7 +7,7 @@ plugins {
 } 
 
 group = 'com.recetario'
-version = '0.0.1-SNAPSHOT'
+version = 'recetario'
 sourceCompatibility = '11'
 
 configurations {
@@ -49,9 +49,4 @@ test {
 compileJava { // QueryDSL must have (.\gradlew clean build)
     options.compilerArgs << "-s" // Specific output directory
     options.compilerArgs << "$projectDir/src/main/java" // Output directory
-}
-
-jar { // .jar file baseName definition for Heroku's Procfile
-    baseName = 'app'
-    version = '0.0.1'
 }
