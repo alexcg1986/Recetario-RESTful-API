@@ -3,7 +3,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 	id 'war'
-	id 'java-library' // QueryDSL must have
+	id 'java-library' // QueryDSL must have (Java Library API implementation)
 } 
 
 group = 'com.recetario'
@@ -21,7 +21,7 @@ repositories {
 }
 
 dependencies {
-	api 'com.querydsl:querydsl-jpa:4.4.0' // QueryDSL must have
+	api 'com.querydsl:querydsl-jpa:4.4.0' // QueryDSL must have (Java Library API)
 
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-hateoas'
@@ -33,8 +33,8 @@ dependencies {
 	
 	annotationProcessor 'org.projectlombok:lombok'
 	annotationProcessor 'com.querydsl:querydsl-apt:4.4.0:jpa' // QueryDSL must have (exactly this way, including :jpa)
-	annotationProcessor 'jakarta.persistence:jakarta.persistence-api' // QueryDSL must have
-    annotationProcessor 'jakarta.annotation:jakarta.annotation-api' // QueryDSL must have
+	annotationProcessor 'jakarta.persistence:jakarta.persistence-api' // QueryDSL must have (Gradle 5+)
+    annotationProcessor 'jakarta.annotation:jakarta.annotation-api' // QueryDSL must have (Gradle 5+)
 
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
@@ -44,4 +44,9 @@ dependencies {
 
 test {
 	useJUnitPlatform()
+}
+
+compileJava { // QueryDSL must have (.\gradlew clean build)
+    options.compilerArgs << "-s" // Specific output directory
+    options.compilerArgs << "$projectDir/src/main/java" // Output directory
 }

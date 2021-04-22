@@ -9,7 +9,6 @@ import javax.annotation.Generated;
 import com.querydsl.core.types.Path;
 import com.querydsl.core.types.dsl.PathInits;
 
-
 /**
  * QPlato is a Querydsl query type for Plato
  */
@@ -57,4 +56,3 @@ public class QPlato extends EntityPathBase<Plato> {
     }
 
 }
-

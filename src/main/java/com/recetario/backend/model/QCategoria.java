@@ -9,7 +9,6 @@ import javax.annotation.Generated;
 import com.querydsl.core.types.Path;
 import com.querydsl.core.types.dsl.PathInits;
 
-
 /**
  * QCategoria is a Querydsl query type for Categoria
  */
@@ -24,7 +23,8 @@ public class QCategoria extends EntityPathBase<Categoria> {
 
     public final StringPath nombre = createString("nombre");
 
-    public final ListPath<Plato, QPlato> platos = this.<Plato, QPlato>createList("platos", Plato.class, QPlato.class, PathInits.DIRECT2);
+    public final ListPath<Plato, QPlato> platos = this.<Plato, QPlato>createList("platos", Plato.class, QPlato.class,
+            PathInits.DIRECT2);
 
     public QCategoria(String variable) {
         super(Categoria.class, forVariable(variable));
@@ -39,4 +39,3 @@ public class QCategoria extends EntityPathBase<Categoria> {
     }
 
 }
-

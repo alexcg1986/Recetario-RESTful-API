@@ -14,6 +14,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.http.HttpStatus;
 
 @ExtendWith(MockitoExtension.class)
 public class CategoriaRestControllerUnitTest {
@@ -36,6 +37,6 @@ public class CategoriaRestControllerUnitTest {
             list.add(categoriaDTO);
         }
         Mockito.when(categoriaService.getAll()).thenReturn(list);
-        assertEquals(list, categoriaRestController.getAll());
+        assertEquals(HttpStatus.OK, categoriaRestController.getAll().getStatusCode());
     }
 }
