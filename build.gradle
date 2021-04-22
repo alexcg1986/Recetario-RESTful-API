@@ -38,7 +38,7 @@ dependencies {
 
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
- 	compile 'com.github.jsimone:webapp-runner:8.5.11.3' // Heroku WAR deploy
+ 	// compile 'com.github.jsimone:webapp-runner:8.5.11.3' // Heroku WAR deploy
 
 	runtimeOnly 'mysql:mysql-connector-java'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
@@ -53,16 +53,16 @@ compileJava { // QueryDSL must have (.\gradlew clean build)
     options.compilerArgs << "$projectDir/src/main/java" // Output directory
 }
 
-task stage() { // Heroku WAR deploy
-    dependsOn clean, war
-}
-war.mustRunAfter clean // Heroku WAR deploy
+// task stage() { // Heroku WAR deploy
+//     dependsOn clean, war
+// }
+// war.mustRunAfter clean // Heroku WAR deploy
 
-task copyToLib(type: Copy) { // Heroku WAR deploy
-    into "$buildDir/server"
-    from(configurations.compile) {
-        include "webapp-runner*"
-    }
-}
+// task copyToLib(type: Copy) { // Heroku WAR deploy
+//     into "$buildDir/server"
+//     from(configurations.compile) {
+//         include "webapp-runner*"
+//     }
+// }
 
-stage.dependsOn(copyToLib) // Heroku WAR deploy
+// stage.dependsOn(copyToLib) // Heroku WAR deploy
