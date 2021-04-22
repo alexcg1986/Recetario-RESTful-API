@@ -53,6 +53,10 @@ compileJava { // QueryDSL must have (.\gradlew clean build)
     options.compilerArgs << "$projectDir/src/main/java" // Output directory
 }
 
+war { // Heroku force WAR
+    enabled = true
+}
+
 task stage() { // Heroku WAR deploy
     dependsOn clean, war
 }
