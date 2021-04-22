@@ -1,6 +1,0 @@
-com/recetario/backend/repository/CategoriaRepositoryIntegrationTest.java
- com.recetario.backend.repository.CategoriaRepositoryIntegrationTest
-com/recetario/backend/controller/CategoriaRestControllerUnitTest.java
- com.recetario.backend.controller.CategoriaRestControllerUnitTest
-com/recetario/backend/BackendApplicationTests.java
- com.recetario.backend.BackendApplicationTests
