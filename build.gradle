@@ -8,7 +8,7 @@ plugins {
 
 group = 'com.recetario'
 version = 'recetario' // App name
-sourceCompatibility = '11' // JDK 
+sourceCompatibility = '11' // JDK 11+
 
 configurations {
 	compileOnly {
@@ -33,8 +33,8 @@ dependencies {
 	
 	annotationProcessor 'org.projectlombok:lombok'
 	annotationProcessor 'com.querydsl:querydsl-apt:4.4.0:jpa' // QueryDSL must have (exactly this way, including :jpa)
-	annotationProcessor 'jakarta.persistence:jakarta.persistence-api' // QueryDSL must have (Gradle 5+)
-    annotationProcessor 'jakarta.annotation:jakarta.annotation-api' // QueryDSL must have (Gradle 5+)
+	annotationProcessor 'jakarta.persistence:jakarta.persistence-api' // QueryDSL must have (Gradle 5+) [6.8+]
+    annotationProcessor 'jakarta.annotation:jakarta.annotation-api' // QueryDSL must have (Gradle 5+) [6.8+]
 
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
