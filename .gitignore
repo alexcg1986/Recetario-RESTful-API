@@ -1,5 +1,6 @@
 .gradle
 .vscode
+.settings
 /build
 /bin
 /src/main/resources
