@@ -17,29 +17,30 @@ configurations {
 }
 
 repositories {
-	mavenCentral()
+  mavenCentral()
 }
 
 dependencies {
 	api 'com.querydsl:querydsl-jpa:4.4.0' // QueryDSL must have (Java Library API)
 
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	
+	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-hateoas'
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.projectlombok:lombok'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	
-	annotationProcessor 'org.projectlombok:lombok'
+
 	annotationProcessor 'com.querydsl:querydsl-apt:4.4.0:jpa' // QueryDSL must have (exactly this way, including :jpa)
 	annotationProcessor 'jakarta.persistence:jakarta.persistence-api' // QueryDSL must have (Gradle 5+) [6.8.2]
-    annotationProcessor 'jakarta.annotation:jakarta.annotation-api' // QueryDSL must have (Gradle 5+) [6.8.2]
+	annotationProcessor 'jakarta.annotation:jakarta.annotation-api' // QueryDSL must have (Gradle 5+) [6.8.2]
+	annotationProcessor 'org.projectlombok:lombok'
+	
+	runtimeOnly 'mysql:mysql-connector-java'
 
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-
-	runtimeOnly 'mysql:mysql-connector-java'
-	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 }
 
 test {
