@@ -8,7 +8,7 @@ plugins {
 
 group = 'com.recetario'
 version = 'recetario' // App name
-sourceCompatibility = '11' // JDK 11+
+sourceCompatibility = '15' // JDK
 
 configurations {
 	compileOnly {
