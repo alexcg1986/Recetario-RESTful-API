@@ -2,13 +2,12 @@ plugins {
 	id 'org.springframework.boot' version '2.4.5'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
-	id 'war'
 	id 'java-library' // QueryDSL must have (Java Library API implementation)
 } 
 
 group = 'com.recetario'
-version = 'recetario' // App name
-sourceCompatibility = '15' // JDK
+version = 'beta'
+sourceCompatibility = '11' // JDK
 
 configurations {
 	compileOnly {
@@ -23,9 +22,7 @@ repositories {
 dependencies {
 	api 'com.querydsl:querydsl-jpa:4.4.0' // QueryDSL must have (Java Library API)
 
-	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
-	
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-hateoas'
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'

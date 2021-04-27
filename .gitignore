@@ -3,4 +3,4 @@
 .settings
 /build
 /bin
-/src/main/resources
+#/src/main/resources
