@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/procedencia")
-@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "https://spa-recetario.netlify.app")
 public class ProcedenciaRestController {
 
     @Autowired

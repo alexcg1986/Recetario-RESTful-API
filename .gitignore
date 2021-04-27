@@ -1,6 +1,8 @@
 .gradle
 .vscode
 .settings
-/build
 /bin
-#/src/main/resources
+/build
+/src/main/java/com/recetario/backend/model/QCategoria.java
+/src/main/java/com/recetario/backend/model/QPlato.java
+/src/main/java/com/recetario/backend/model/QProcedencia.java

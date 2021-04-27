@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/plato")
-@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "https://spa-recetario.netlify.app")
 public class PlatoRestController {
 
     @Autowired

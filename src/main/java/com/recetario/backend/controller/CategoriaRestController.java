@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/categoria")
-@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "https://spa-recetario.netlify.app")
 public class CategoriaRestController {
 
     @Autowired
